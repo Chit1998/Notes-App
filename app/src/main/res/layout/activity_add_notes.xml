@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddNotesActivity">
+
+    <EditText
+        android:id="@+id/eTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:padding="14dp"
+        android:hint="@string/title_here"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:autofillHints="text"
+        android:background="@drawable/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/eDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:hint="@string/description_here"
+        android:textColorHint="#B3B2B2"
+        android:textColor="@color/black"
+        android:gravity="top"
+        android:autofillHints="text"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@id/eTitle"
+        app:layout_constraintEnd_toEndOf="@id/eTitle"
+        app:layout_constraintTop_toBottomOf="@id/eTitle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        app:tint="@color/white"
+        android:backgroundTint="@color/purple_500"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
